@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    <resource-ref>
+        <res-ref-name>con6</res-ref-name>
+        <res-type>javax.sql.ConnectionPoolDataSource</res-type>
+        <res-auth>Container</res-auth>
+        <res-sharing-scope>Shareable</res-sharing-scope>
+    </resource-ref>
+    
+    
+    
+    
+    
+   
+    
+    
+    
+    <error-page>
+    <!-- Missing login -->
+    <error-code>401</error-code>
+    <location>/404.jsp</location>
+</error-page>
+<error-page>
+    <!-- Forbidden directory listing -->
+    <error-code>403</error-code>
+    <location>/404.jsp</location>
+</error-page>
+<error-page>
+    <!-- Missing resource -->
+    <error-code>404</error-code>
+    <location>/404.jsp</location>
+</error-page>
+<error-page>
+    <!-- Uncaught exception -->
+    <error-code>500</error-code>
+    <location>/404.jsp</location>
+</error-page>
+<error-page>
+    <!-- Unsupported servlet method -->
+    <error-code>503</error-code>
+    <location>/404.jsp</location>
+</error-page>
+    
+    <servlet>
+        <servlet-name>doupload</servlet-name>
+        <servlet-class>mnm.serv.doupload</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doupload</servlet-name>
+        <url-pattern>/doupload</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>pn</servlet-name>
+        <servlet-class>mnm.serv.productnew</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pn</servlet-name>
+        <url-pattern>/pn</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>s1n</servlet-name>
+        <servlet-class>mnm.serv.doupload_slider1</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s1n</servlet-name>
+        <url-pattern>/s1n</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>s2n</servlet-name>
+        <servlet-class>mnm.serv.doupload_slider2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s2n</servlet-name>
+        <url-pattern>/s2n</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>hn</servlet-name>
+        <servlet-class>mnm.serv.hnew</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hn</servlet-name>
+        <url-pattern>/hn</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>an</servlet-name>
+        <servlet-class>mnm.serv.advnew</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>an</servlet-name>
+        <url-pattern>/an</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>s1d</servlet-name>
+        <servlet-class>mnm.serv.slider1del</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>s1d</servlet-name>
+        <url-pattern>/s1d</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>od</servlet-name>
+        <servlet-class>mnm.serv.orderdel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>od</servlet-name>
+        <url-pattern>/od</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>acceptOrder</servlet-name>
+        <servlet-class>mnm.serv.order_accept</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>acceptOrder</servlet-name>
+        <url-pattern>/acceptOrder</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>pd</servlet-name>
+        <servlet-class>mnm.serv.productdel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pd</servlet-name>
+        <url-pattern>/pd</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>pid</servlet-name>
+        <servlet-class>mnm.serv.productidel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pid</servlet-name>
+        <url-pattern>/pid</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>pimage</servlet-name>
+        <servlet-class>mnm.serv.doupload_pimage</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pimage</servlet-name>
+        <url-pattern>/pimage</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>sendticket</servlet-name>
+        <servlet-class>mnm.serv.sendticket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sendticket</servlet-name>
+        <url-pattern>/sendticket</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>bill</servlet-name>
+        <servlet-class>mnm.serv.bill</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bill</servlet-name>
+        <url-pattern>/bill</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>cn</servlet-name>
+        <servlet-class>mnm.serv.categorynew</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cn</servlet-name>
+        <url-pattern>/cn</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>cd</servlet-name>
+        <servlet-class>mnm.serv.categorydel</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cd</servlet-name>
+        <url-pattern>/cd</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet>
+        <servlet-name>banknew</servlet-name>
+        <servlet-class>mnm.serv.hesab_new</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>banknew</servlet-name>
+        <url-pattern>/banknew</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>merchentnew</servlet-name>
+        <servlet-class>mnm.serv.merchent_new</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>merchentnew</servlet-name>
+        <url-pattern>/merchentnew</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>newwithdraw</servlet-name>
+        <servlet-class>mnm.serv.newWithdrow</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>newwithdraw</servlet-name>
+        <url-pattern>/newwithdraw</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>doforgot</servlet-name>
+        <servlet-class>mnm.serv.doforgot</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doforgot</servlet-name>
+        <url-pattern>/doforgot</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>dologin</servlet-name>
+        <servlet-class>mnm.serv.dologin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dologin</servlet-name>
+        <url-pattern>/dologin</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>doregister</servlet-name>
+        <servlet-class>mnm.serv.doregister</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>doregister</servlet-name>
+        <url-pattern>/doregister</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>dologout</servlet-name>
+        <servlet-class>mnm.serv.dologout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dologout</servlet-name>
+        <url-pattern>/dologout</url-pattern>
+    </servlet-mapping>
+    
+    
+</web-app>
